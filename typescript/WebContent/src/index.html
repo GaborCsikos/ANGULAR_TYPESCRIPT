@@ -9,6 +9,10 @@
          <script src="resources/angular-route.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-animate.js"></script>
         <script src="src/app.js"></script>
+         <script src="src/BookListCtrl.js"></script>
+         <script src="src/BookService.js"></script>
+         <script src="src/HeaderCtrl.js"></script>
+         <script src="src/KartService.js"></script>
     </head>
     <body>
 
@@ -38,7 +42,7 @@
 					<li>Released: {{book.releaseDate}}</li>
 				</ul>
 				<p>{{book.details}}</p>
-				<button class="btn btn-info pull-right" ng-click="addToKart(book)">Add to Kart</button>
+				<button class="btn btn-info pull-right" ng-click="addToKart(book)">Buy</button>
 			</div>
 		</li>
 	</ul>
