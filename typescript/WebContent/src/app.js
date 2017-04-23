@@ -1,20 +1,5 @@
 var myApp = angular.module("myApp", ["ngRoute", "ngAnimate"]);
 
-myApp.config(function($routeProvider) {
-	$routeProvider
-		.when("/books", {
-			templateUrl: "/book-list.html",
-			controller: "BookListCtrl"
-		})
-		.when("/kart", {
-			templateUrl: "/kart-list.html",
-			controller: "KartListCtrl"
-		})
-	.otherwise({
-		redirectTo: "/books"
-	});
-});
-
 myApp.factory("kartService", function() {
 	var kart = [];
 	
@@ -105,14 +90,6 @@ myApp.factory("bookService", function() {
 	}
 });
 
-myApp.controller("KartListCtrl", function($scope, kartService) {
-	$scope.kart = kartService.getKart();
-	
-	$scope.buy = function(book) {
-		//console.log("book: ", book);
-		kartService.buy(book);
-	}
-});
 
 myApp.controller("HeaderCtrl", function($scope, $location) {
 	$scope.appDetails = {};
@@ -133,6 +110,6 @@ myApp.controller("BookListCtrl", function($scope, bookService, kartService) {
 	$scope.books = bookService.getBooks();
 	
 	$scope.addToKart = function(book) {
-		kartService.addToKart(book);
+		alert('Bought');
 	}
 });
