@@ -1,4 +1,6 @@
-class KartService{
+import {myApp} from './app';
+
+export class KartService{
 
 	constructor(){
 	var kart = [];
@@ -18,3 +20,4 @@ class KartService{
 	
 
 }
+myApp.component('KartService', KartService);

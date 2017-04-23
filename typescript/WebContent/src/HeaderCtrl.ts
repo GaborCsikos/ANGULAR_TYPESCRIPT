@@ -1,4 +1,6 @@
-class HeaderCtrl{
+import {myApp} from './app';
+
+export class HeaderCtrl{
 
 	constructor($scope, $location){
 		$scope.appDetails = {};
@@ -16,3 +18,5 @@ class HeaderCtrl{
 
 	}
 }
+
+myApp.component('HeaderCtrl', HeaderCtrl);

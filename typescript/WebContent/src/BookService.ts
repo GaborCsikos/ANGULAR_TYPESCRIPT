@@ -1,4 +1,6 @@
-class BookService{
+import {myApp} from './app';
+
+export class BookService{
 
 	constructor(){
 	var books = [
@@ -75,4 +77,6 @@ class BookService{
 	
 	}
 }
+
+myApp.component('BookService', BookService);
 
